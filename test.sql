@@ -1,0 +1,1 @@
+INSERT INTO sc (stu_sn, cou_sn, state)  VALUES (101, 103,  'yyes');

@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link href="/course_list.css" rel="stylesheet" /> 
+{% endblock %}
+
+{% block page_content %}
+<div class="paper">
+    <div class="paper-head">
+        <div id="new-btn" class="btn">新建课程安排信息</div>
+    </div>
+    <div class="paper-body">
+        <table id="course-table" class="table"> 
+            <thead>
+                <tr>
+                    <th class="col-cou_name">课程名</th>
+                    <th class="col-cou_no">课程序号</th>
+                    <th class="col-teacher">任课教师</th>
+                    <th class="col-term">课程学期</th>
+                    <th class="col-room">课程地点</th>
+                    <th class="col-week">课程周次</th>
+                    <th class="col-day">星期</th>
+                    <th class="col-jie">节次</th>
+                   <th></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div class="course-editor dialog-background">
+        <form class="dialog">
+            <div class="dialog-head"></div>
+            <div class="dialog-body">
+                <input type="hidden" name="cou_sn" />
+
+                <label>课程序号:</label>
+                <input type="text" name="cou_no" />
+                <label>课程名:</label>
+                <input type="text" name="cou_name" />
+                <label>任课教师:</label>
+                <input type="text" name="teacher" />
+                
+                <label>课程学期:</label>
+                <div class="radio-choices">
+                    <span class="content">
+                        <select name="term">
+                            <option value="一">大一上学期</option>
+                            <option value="二">大一下学期</option>
+                            <option value="三">大二上学期</option>
+                            <option value="四">大二下学期</option>
+                            <option value="五">大三上学期</option>
+                            <option value="六">大三下学期</option>
+                            <option value="七">大四上学期</option>
+                            <option value="八">大四下学期</option>
+                        </select>
+                    </span>
+                </div>
+                <label>课程地点:</label>
+                <input type="text" name="room" />
+                <label>课程周次:</label>
+                <input type="number" name="week" />
+                <label>星期:</label>
+                <div class="radio-choices">
+                    <span class="content">
+                        <select name="day">
+                            <option value="Mon.">Mon.</option>
+                            <option value="Tue.">Tue.</option>
+                            <option value="Wed.">Wed.</option>
+                            <option value="Thur.">Thur.</option>
+                            <option value="Fri.">Fri.</option>
+                            <option value="Sat.">Sat.</option>
+                            <option value="Sun.">Sun.</option>
+                        </select>
+                    </span>
+                </div>
+                <label>节次: </label>
+                <div class="radio-choices">
+                     <span class="content">
+                        <select name="jie">
+                            <option value="1">第一大节</option>
+                            <option value="2">第二大节</option>
+                            <option value="3">第三大节</option>
+                            <option value="4">第四大节</option>
+                            <option value="5">第五大节</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+            <div class="dialog-footer">
+                <a id="save-btn" class="btn">保存</a>
+                <a id="close-btn" class="btn">关闭</a>
+            </div>
+        </form>
+    </div>
+    <div class="comfirmation-dialog dialog-background">
+        <form class="dialog">
+            <div class="dialog-head"></div>
+            <div class="dialog-body">
+                <div id="message"></div>
+            </div>
+            <div class="dialog-footer">
+                <a id="ok-btn" class="btn">确定</a>
+                <a id="cancel-btn" class="btn">放弃</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="/course.js"></script>
+{% endblock %}

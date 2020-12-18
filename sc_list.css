@@ -1,0 +1,52 @@
+
+
+
+form.sc-form > input, form.sc-form > select {
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+form.sc-form > select {
+    min-width: 8em;
+}
+
+
+.ctrlbar {
+    display: flex;
+    padding: 0 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.ctrlbar > .btn {
+    padding: 2px 15px;
+    background-color: darkcyan;
+}
+
+
+.paper2 {
+    box-shadow: 4px 5px 4px 2px #aaa;
+    padding: 2em;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #eee;
+    background-color: #fff;
+
+    margin: 1em 2em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    animation: fadeInDown; 
+    animation-duration: 0.8s;
+}
+
+.paper2 > .paper-head {
+    min-height: 2rem;
+}
+
+.paper2 > .paper-body {
+    flex: 1 1;
+}
+

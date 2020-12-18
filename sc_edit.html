@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+<!--  -->
+{% block styles %} {% endblock %}
+
+<!--  -->
+{% block page_content %}
+<div class="paper">
+    <form action="/action/sc/edit/{{stu_sn}}/{{cou_sn}}" method="post">
+        课程：
+
+        <select name="cou_sn">
+            <option value="">--选择--</option>
+            {% for cou in courses %}
+            <option value="{{cou.cou_sn}}">
+                {{cou.cou_name}}({{cou.cou_sn}})
+            </option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="修改" />
+
+
+
+    </form>
+    <hr />
+    <a href="/sc"> 回到成绩列表 </a>
+</div>
+{% endblock %}
